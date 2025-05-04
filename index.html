@@ -50,23 +50,6 @@
   });
 </script>
 
-
-<script>
-  const video = document.getElementById('bg-video');
-  const sources = ['videos/OceanTide.mp4', 'videos/OceanTide(reverse).mp4'];
-  let index = 0;
-
-  function playNext() {
-    video.src = sources[index];
-    video.play();
-    index = (index + 1) % sources.length;
-  }
-
-  video.addEventListener('ended', playNext);
-
-  playNext(); // Start the first video
-</script>
-  
   <!-- ✅ HEADER -->
   <header style="background: #0132d1; color: #ffffff; padding: 0.5rem 0.5rem 0.5rem; text-align: center;">
     <h1 style="font-family: 'Playfair Display', serif; font-size: 5rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 1rem;">
