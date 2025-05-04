@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al-Qureshi Perfumes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>  
+</head>
+<body style="font-family: 'Inter', sans-serif; background: #fafafa; color: #333; line-height: 1.2; padding: 0; margin: 0;">
+
+  <!-- ✅ BACKGROUND VIDEO -->
+  <video id="bg-video" muted playsinline style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.2;
+  filter: brightness(0.75);
+  pointer-events: none;
+"></video>
+
+<script>
+  const video = document.getElementById('bg-video');
+  const sources = ['media/OceanTide.mp4', 'media/OceanTide(reverse).mp4'];
+  let index = 0;
+
+  function playNext() {
+    video.src = sources[index];
+    video.play();
+    index = (index + 1) % sources.length;
+  }
+
+  video.addEventListener('ended', playNext);
+
+  playNext(); // Start the first video
+</script>
+  
+  <!-- ✅ HEADER -->
+  <header style="background: linear-gradient(135deg, #0132d1, #000000); color: #ffffff; padding: 0.5rem 0.5rem 0.5rem; text-align: center;">
+    <h1 style="font-family: 'Playfair Display', serif; font-size: 5rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 1rem;">
+      <a href="index.html" style="display: inline-block;">
+        <img src="images/result_logo.png" alt="Al-Qureshi Logo" style="height: 200px; width: 600px;" />
+      </a>
+    </h1>
+  </header>  
+
+<!-- ✅ LEGAL LINKS -->
+<nav style="position: sticky; top: 0; width: 100%; background: #a78000; color: #ffffff; padding: 0.75rem 2rem; z-index: 10;">
+    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+      <a href="index.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Home</a>
+      <a href="contact.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Contact</a>
+      <a href="terms.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Terms of Service</a>
+      <a href="shipping.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Shipping Policy</a>
+      <a href="refund.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Refund Policy</a>
+      <a href="privacy.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Privacy Policy</a>
+    </div>
+  </nav>
+
+<!-- ✅ REFUND POLICY -->
+<section id="refund" style="width: 1000px; padding: 4rem 10vw; background: transparent; text-align: left; color: #000; font-size: 1.15rem; line-height: 1.8;">
+    <h2>Refund & Return Policy</h2>
+    <p>If you’re not satisfied, we’ll help make it right.</p>
+    <ul style="list-style: none; padding: 0;">
+      <li><strong>Returns:</strong> Unused, unopened items only. Within 14 days of delivery.</li></p>
+      <li><strong>Hygiene Note:</strong> Used items cannot be returned, for safety and hygiene reasons.</li></p>
+      <li><strong>Return Process:</strong> Email us at alqureshiperfumes.business@gmail.com with your order number and reason.</li></p>
+      <li><strong>Damaged Items:</strong> If your item arrives damaged, please contact us within 48 hours and include clear photos.<br></p>
+      Note: All items are weighed and recorded during packaging for quality assurance. We highly recommend customers also record the unboxing of their parcel – this helps resolve any issues quickly and fairly!</li>
+    </ul>
+  </section>
