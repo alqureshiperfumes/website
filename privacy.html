@@ -11,10 +11,21 @@
     }
   </style>  
 </head>
-<body style="font-family: 'Inter', sans-serif; background: #fafafa; color: #333; line-height: 1.2; padding: 0; margin: 0;">
+    <!-- ✅ LEGAL LINKS -->
+    <nav style="position: fixed; bottom: 0; width: 100%; height: 15px; background: #000000; color: #ffffff; padding: 0.75rem 2rem; z-index: 10;">
+      <div style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 100%; margin: 0 auto;">
+        <a href="index.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Home</a>
+        <a href="contact.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Contact</a>
+        <a href="terms.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Terms of Service</a>
+        <a href="shipping.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Shipping Policy</a>
+        <a href="refund.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Refund Policy</a>
+        <a href="privacy.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Privacy Policy</a>
+      </div>
+    </nav>
+    <body style="font-family: 'Inter', sans-serif; background: #fafafa; color: #333; line-height: 1.2; padding: 0 0 80px 0; margin: 0;">
 
   <!-- ✅ BACKGROUND VIDEO -->
-  <video id="bg-video" muted playsinline style="
+<video id="bg-video" autoplay muted playsinline style="
   position: fixed;
   top: 0;
   left: 0;
@@ -25,54 +36,52 @@
   opacity: 0.2;
   filter: brightness(0.75);
   pointer-events: none;
-"></video>
+">
+  <source id="video-source" src="videos/OceanTide.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 <script>
-  const video = document.getElementById('bg-video');
-  const sources = ['media/OceanTide.mp4', 'media/OceanTide(reverse).mp4'];
+  const sources = [
+    "videos/OceanTide.mp4",
+    "videos/OceanTide(reverse).mp4"
+  ];
   let index = 0;
 
-  function playNext() {
-    video.src = sources[index];
-    video.play();
+  const video = document.getElementById("bg-video");
+  const source = document.getElementById("video-source");
+
+  video.addEventListener("ended", () => {
     index = (index + 1) % sources.length;
-  }
-
-  video.addEventListener('ended', playNext);
-
-  playNext(); // Start the first video
+    source.src = sources[index];
+    video.load();
+    video.play().catch(err => {
+      console.error("Playback failed:", err);
+    });
+  });
 </script>
-  
-  <!-- ✅ HEADER -->
-  <header style="background: linear-gradient(135deg, #0132d1, #000000); color: #ffffff; padding: 0.5rem 0.5rem 0.5rem; text-align: center;">
-    <h1 style="font-family: 'Playfair Display', serif; font-size: 5rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 1rem;">
-      <a href="index.html" style="display: inline-block;">
-        <img src="images/result_logo.png" alt="Al-Qureshi Logo" style="height: 200px; width: 600px;" />
-      </a>
-    </h1>
-  </header>  
 
-<!-- ✅ LEGAL LINKS -->
-<nav style="position: sticky; top: 0; width: 100%; background: #a78000; color: #ffffff; padding: 0.75rem 2rem; z-index: 10;">
-    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
-      <a href="index.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Home</a>
-      <a href="contact.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Contact</a>
-      <a href="terms.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Terms of Service</a>
-      <a href="shipping.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Shipping Policy</a>
-      <a href="refund.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Refund Policy</a>
-      <a href="privacy.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Privacy Policy</a>
-    </div>
-  </nav>
+  <!-- ✅ HEADER -->
+  <header style="background:#0132d1; color: #ffffff; padding: 0.5rem 0.5rem 0.5rem; text-align: center;">
+    <h1 style="font-family: 'Playfair Display', serif; font-size: 5rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 1rem;">
+      <img src="images/result_logo.png" alt="Al-Qureshi Logo" style="height: 200px; width: 600px;" />
+    </h1>
+  </header>
+
+  <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+
+<!-- ✅ Decorative Gold Line -->
+<div style="width: 100%; height: 25px; background: #a78000;"></div>
 
 <!-- ✅ PRIVACY POLICY -->
 <section id="privacy" style="width: 1000px; padding: 4rem 10vw; background: transparent; text-align: left; color: #000; font-size: 1.15rem; line-height: 1.8;">
-    <h2>Privacy Policy</h2>
-    <p>We value your privacy and handle your data with care.</p>
-    <ul style="list-style: none; padding: 0;">
-      <li><strong>What We Collect:</strong> Name, email, address, and secure payment info.</li></p>
-      <li><strong>How We Use It:</strong> To process orders and send updates (if opted in).</li></p>
-      <li><strong>Data Sharing:</strong> Only with essential services (e.g. payment or shipping partners).</li></p>
-      <li><strong>Your Rights:</strong> Request your data, correct it, or have it deleted anytime.</li></p>
-      <li><strong>Contact:</strong> alqureshiperfumes.business@gmail.com</li>
-    </ul>
-  </section>
+  <h2>Privacy Policy</h2>
+  <p>Your privacy is valued, and so is the way that your data is handled</p>
+  <ul style="list-style: none; padding: 0;">
+    <li><strong>What Is Collected:</strong> Name, email, address, and secure payment info.</li></p>
+    <li><strong>How It Is Used:</strong> To process orders and send updates (if opted in).</li></p>
+    <li><strong>Data Sharing:</strong> Only with essential services (e.g. payment or shipping partners).</li></p>
+    <li><strong>Your Rights:</strong> Request your data, correct it, or have it deleted anytime.</li></p>
+    <li><strong>Contact:</strong> alqureshiperfumes.business@gmail.com</li>
+  </ul>
+</section>
