@@ -4,198 +4,200 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Al-Qureshi Perfumes</title>
+  <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="T7A6EMMB2J5ZE"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     html {
       scroll-behavior: smooth;
     }
-  </style>  
+    paypal-add-to-cart-button {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    paypal-add-to-cart-button > div > div > div > div.paypal-button-label {
+      white-space: normal !important;
+    }
+  </style>
 </head>
 
-    <!-- ✅ LEGAL LINKS -->
-    <nav style="position: fixed; bottom: 0; width: 100%; height: 25px; background: #000000; color: #ffffff; padding: 0.75rem 2rem; z-index: 10;">
-      <div style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 100%; margin: 0 auto;">
-        <a href="index.html" style="font-size: 1.25rem; color: #ffffff; text-decoration: none;">Home</a>
-        <a href="contact.html" style="font-size: 1.25rem; color: #ffffff; text-decoration: none;">Contact</a>
-        <a href="terms.html" style="font-size: 1.25rem; color: #ffffff; text-decoration: none;">Terms of Service</a>
-        <a href="shipping.html" style="font-size: 1.25rem; color: #ffffff; text-decoration: none;">Shipping Policy</a>
-        <a href="refund.html" style="font-size: 1.25rem; color: #ffffff; text-decoration: none;">Refund Policy</a>
-        <a href="privacy.html" style="font-size: 1.25rem; color: #ffffff; text-decoration: none;">Privacy Policy</a>
-      </div>
-    </nav>
-    <body style="font-family: 'Inter', sans-serif; background: #fafafa; color: #333; line-height: 1.2; padding: 0 0 80px 0; margin: 0;">
+<body style="font-family: 'Inter', sans-serif; background: #fafafa; color: #333; line-height: 1.2; padding: 0 0 40px 0; margin: 0;">
 
-  <!-- ✅ BACKGROUND VIDEO -->
-<video id="bg-video" autoplay muted playsinline style="
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  opacity: 0.2;
-  filter: brightness(0.75);
-  pointer-events: none;
-">
-  <source id="video-source" src="videos/OceanTide.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+  <!-- Radial Overlay -->
+  <div style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at center, rgba(167, 128, 0, 0.15), rgba(0, 0, 0, 0.3));
+    z-index: 0;
+    pointer-events: none;
+    mix-blend-mode: soft-light;
+  "></div>
 
-<script>
-  const sources = [
-    "videos/OceanTide.mp4",
-    "videos/OceanTide(reverse).mp4"
-  ];
-  let index = 0;
-
-  const video = document.getElementById("bg-video");
-  const source = document.getElementById("video-source");
-
-  video.addEventListener("ended", () => {
-    index = (index + 1) % sources.length;
-    source.src = sources[index];
-    video.load();
-    video.play().catch(err => {
-      console.error("Playback failed:", err);
-    });
-  });
-</script>
-
-  <!-- ✅ HEADER -->
-  <header style="background: linear-gradient(to right, #0132d1, #0132d1, #0132d1, #0132d1, #0132d1, #0132d1, #0132d1, #0132d1, #0132d1, #0132d1); color: #ffffff; padding: 0.5rem 0.5rem 0.5rem; text-align: center;">
+  <!-- Header -->
+  <header style="background: linear-gradient(to right, #000000, #000000, #0132d1, #0132d1, #0132d1, #0132d1, #003cff, #000000, #000000); color: #ffffff; padding: 0.5rem 0.5rem 0.5rem; text-align: center;">
     <h1 style="font-family: 'Playfair Display', serif; font-size: 5rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 1rem;">
       <img src="images/logowithcolour.png" alt="Al-Qureshi Logo" style="height: 100px; width: 500px;" />
     </h1>
   </header>
 
-  <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+  <!-- Sticky Nav -->
+  <nav style="position: sticky; top: 0; z-index: 5; background: linear-gradient(to right, #000000, #000000, #ffc400, #ffd140, #ffd140, #ffc400, #000000, #000000); display: flex; justify-content: center; gap: 3rem; align-items: center; width: 100%; height: 35px; font-weight: bold; font-family: 'Inter', sans-serif;">
+    <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
+    <script>
+      cartPaypal.Cart({ id: "pp-view-cart" })
+    </script>
+    <a href="#him" style="color: #000000; text-decoration: none;">For Him</a>
+    <a href="#her" style="color: #000000; text-decoration: none;">For Her</a>
+    <a href="#unisex" style="color: #000000; text-decoration: none;">Unisex</a>
+  </nav>
 
-<!-- ✅ Decorative Gold Line -->
-<div style="width: 100%; height: 20px; background: linear-gradient(to right, #000000, #a78000, #a78000, #a78000, #a78000, #a78000, #000000);"></div>
+  <!-- Image / Intro -->
+  <section style="position: relative; width: 100%; height: 675px; overflow: hidden;">
+    <img src="images/showcase1.jpg" alt="Perfume Showcase" style="width: 100%; height: 675px; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;" />
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #000000; color: #ffffff; padding: 3rem; border-radius: 10px; font-size: 1.5rem; font-family: 'Playfair Display', serif; text-align: center; max-width: 100%;">
+      <p>From a tiny seed of a dream, a world of scents grew.</p>
+      <p>I gathered rare and precious things, creating stories for you.</p>
+      <p>Some feel vintage, others boldly modern.</p>
+      <p>Let your senses wonder, to find your pattern.</p>
+    </div>
+  </section>
 
-    
-<!-- ✅ INTRO OVER IMAGE (WORKING) -->
-<section style="position: relative; width: 100%; height: 675px; overflow: hidden;">
-  <img src="images/showcase1.jpg" alt="Perfume Showcase" style="width: 100%; height: 675px; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;" />
-  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #000000; color: #ffffff; padding: 3rem; border-radius: 10px; font-size: 1.5rem; font-family: 'Playfair Display', serif; text-align: center; max-width: 100%;">
-    <p>From a tiny seed of a dream, a world of scents grew.</p><p>I gathered rare and precious things, creating stories for you.</p><p>Some feel vintage, others boldly modern.</p><p>Let your senses wonder, to find your pattern.</p>
-  </div>
-</section>
+  <!-- FOR HIM -->
+  <section id="him" style="position: relative; overflow: hidden; padding: 3rem 2rem;">
+    <video id="video-him" autoplay muted playsinline style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+      z-index: -1;
+      filter: brightness(0.75);">
+      <source id="source-him" src="videos/OceanTide(m).mp4" type="video/mp4">
+    </video>
+    <script>
+      const sourcesHim = ["videos/OceanTide(m).mp4", "videos/OceanTide(m)(reverse).mp4"];
+      let indexHim = 0;
+      const videoHim = document.getElementById("video-him");
+      const sourceHim = document.getElementById("source-him");
 
-<!-- ✅ FOR HIM -->
-<section style="padding: 3rem 2rem;">
-  <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; margin-bottom: 2rem; color: #000000;">FOR HIM</h2>
-  <div class="products" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5rem; max-width: 100%; margin: auto;">
+      videoHim.addEventListener("ended", () => {
+        indexHim = (indexHim + 1) % sourcesHim.length;
+        sourceHim.src = sourcesHim[indexHim];
+        videoHim.load();
+        videoHim.play().catch(err => console.error("Playback failed:", err));
+      });
+    </script>
 
-    <!-- Cassis Cuir -->
-    <div class="product" style="background: linear-gradient(to right, #000000, #404401, #000000); width: 100%; min-width: 100%; max-width: 100%; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative;">
-      <div class="section-label" style="position: absolute; top: 10px; right: 10px; background: #a78000; color: #fff; padding: 0.3rem 0.7rem; font-size: 0.8rem; border-radius: 5px;"><strong>LIMITED STOCK!</strong></div>
-      <h3 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 1rem; color: #fff;">Cassis Cuir (N.24)</h3>
-      <p style="margin: 0 1rem; color: #fff;">Blackcurrant-infused smoky woods, with a forest-themed leather bite. Inspired by one of Tom Ford's bolder scents, I decided to really test the waters with this one. It's unusual, but definitely unique!</p>
-      <p style="margin: 0.5rem 1rem; font-size: 0.95rem; color: #fff;"><strong>Top:</strong> Blackcurrant, Saffron<br><strong>Heart:</strong> Fir, Leather, Rose<br><strong>Base:</strong> Woods, Amber</p>
-      <div style="display: flex; justify-content: center; gap: 0.5rem; padding: 1rem; min-width: 100%;">
-        <img src="images/CassisCuir.jpg" style="flex: 1; height: 250px; object-fit: contain;" />
-        <img src="images/AmberRollOn.jpg" style="flex: 1; height: 250px; object-fit: contain;" />
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; margin-bottom: 2rem; color: #000000;">FOR HIM</h2>
+    <div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 5rem; max-width: 900px; margin: auto;">
+      <div style="width: 100%;">
+        <paypal-add-to-cart-button data-id="86RR3C3EVRCT8"></paypal-add-to-cart-button>
+        <script>cartPaypal.AddToCart({ id: "86RR3C3EVRCT8" })</script>
       </div>
-      <div style="display: flex; justify-content: center; gap: 1rem; padding: 1rem;">
-        <a href="https://www.paypal.com/ncp/payment/9GVWF8XP9EHQ8" class="cta" style="flex: 1; background: #a78000; color: #fff; text-align: center; font-weight: bold; padding: 0.75rem; border-radius: 50px; text-decoration: none;">30ml Spray</a>
-        <a href="https://www.paypal.com/ncp/payment/2GQPUSMNLENFA" class="cta" style="flex: 1; background: #a78000; color: #fff; text-align: center; font-weight: bold; padding: 0.75rem; border-radius: 50px; text-decoration: none;">10ml Roll-On</a>
+      <div style="width: 100%;">
+        <paypal-add-to-cart-button data-id="AASZ3P6PWGEYC"></paypal-add-to-cart-button>
+        <script>cartPaypal.AddToCart({ id: "AASZ3P6PWGEYC" })</script>
       </div>
     </div>
+  </section>
 
-    <!-- Blue Lunaris -->
-    <div class="product" style="background: linear-gradient(to right, #000000, #000e3b, #000000); width: 100%; min-width: 100%; max-width: 100%; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative;">
-      <div class="section-label" style="position: absolute; top: 10px; right: 10px; background: #a78000; color: #ffffff; padding: 0.3rem 0.7rem; font-size: 0.8rem; border-radius: 5px;"><strong>LIMITED STOCK!</strong></div>
-      <h3 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 1rem; color: #fff;">Blue Lunaris (N.12)</h3>
-      <p style="margin: 0 1rem; color: #fff;">The entwined harmony of cherry and pepper beneath a moonlit sky, adrift in a salted sea where citrus-laced waves crash over velvety musks and shadowed amber.</p>
-      <p style="margin: 0.5rem 1rem; font-size: 0.95rem; color: #fff;"><strong>Top:</strong> Lemon, Bergamot, Sea Salt<br><strong>Heart:</strong> Pink Pepper, Black Cherry<br><strong>Base:</strong> Musks, Amber </p>
-      <div style="display: flex; justify-content: center; gap: 0.5rem; padding: 1rem; min-width: 100%">
-        <img src="images/BlueLunaris.jpg" style="flex: 1; height: 250px; object-fit: contain;" />
-        <img src="images/AmberRollOn.jpg" style="flex: 1; height: 250px; object-fit: contain;" />
+  <!-- FOR HER -->
+  <section id="her" style="position: relative; overflow: hidden; padding: 3rem 2rem;">
+    <video id="video-her" autoplay muted playsinline style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+      z-index: -1;
+      filter: brightness(0.75);">
+      <source id="source-unisex" src="videos/OceanTide(f).mp4" type="video/mp4">
+    </video>
+    <script>
+      const sourcesHim = ["videos/OceanTide(f).mp4", "videos/OceanTide(f)(reverse).mp4"];
+      let indexHer = 0;
+      const videoHer = document.getElementById("video-her");
+      const sourceHer = document.getElementById("source-her");
+
+      videoHer.addEventListener("ended", () => {
+        indexHer = (indexHer + 1) % sourcesHer.length;
+        sourceHer.src = sourcesHer[indexHer];
+        videoHer.load();
+        videoHer.play().catch(err => console.error("Playback failed:", err));
+      });
+    </script>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; margin-bottom: 2rem; color: #000000;">FOR HER</h2>
+    <div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 5rem; max-width: 900px; margin: auto;">
+      <div style="width: 100%;">
+        <paypal-add-to-cart-button data-id="5E2WNG42HG94Q"></paypal-add-to-cart-button>
+        <script>cartPaypal.AddToCart({ id: "5E2WNG42HG94Q" })</script>
       </div>
-      <div style="display: flex; justify-content: center; gap: 1rem; padding: 1rem;">
-        <a href="https://www.paypal.com/ncp/payment/4SV66EG3P8DD2" class="cta" style="flex: 1; background: #a78000; color: #fff; text-align: center; font-weight: bold; padding: 0.75rem; border-radius: 50px; text-decoration: none;">30ml Spray</a>
-        <a href="https://www.paypal.com/ncp/payment/FJTF5XWA4LBF2" class="cta" style="flex: 1; background: #a78000; color: #fff; text-align: center; font-weight: bold; padding: 0.75rem; border-radius: 50px; text-decoration: none;">10ml Roll-On</a>
+      <div style="width: 100%;">
+        <paypal-add-to-cart-button data-id="9R99RXWUE7VZ4"></paypal-add-to-cart-button>
+        <script>cartPaypal.AddToCart({ id: "9R99RXWUE7VZ4" })</script>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ✅ FOR HER -->
-<section style="padding: 3rem 2rem;">
-  <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; margin-bottom: 2rem; color: #000000;">FOR HER</h2>
-  <div class="products" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5rem; max-width: 100%; margin: auto;">
+  <!-- UNISEX -->
+  <section id="unisex" style="position: relative; overflow: hidden; padding: 3rem 2rem;">
+    <video id="video-unisex" autoplay muted playsinline style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.2;
+      z-index: -1;
+      filter: brightness(0.75);">
+      <source id="source-unisex" src="videos/OceanTide(u).mp4" type="video/mp4">
+    </video>
+    <script>
+      const sourcesHim = ["videos/OceanTide(u).mp4", "videos/OceanTide(u)(reverse).mp4"];
+      let indexUnisex = 0;
+      const videoUnisex = document.getElementById("video-unisex");
+      const sourceUnisex = document.getElementById("source-unisex");
 
-    <!-- Emerald Verde -->
-    <div class="product" style="background: linear-gradient(to right, #000000, #032b01, #000000); width: 100%; min-width: 100%; max-width: 100%; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative;">
-      <div class="section-label" style="position: absolute; top: 10px; right: 10px; background: #a78000; color: #fff; padding: 0.3rem 0.7rem; font-size: 0.8rem; border-radius: 5px;"><strong>LIMITED STOCK!</strong></div>
-      <h3 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 1rem; color: #fff;">Emerald Verde (N.21)</h3>
-      <p style="margin: 0 1rem; color: #fff;">A bright bouquet of florals and citrus, rounded by a smooth touch of musk and sandalwood. If you are looking for the perfect feminine fragrance for a special occasion, then look no further!</p>
-      <p style="margin: 0.5rem 1rem; font-size: 0.95rem; color: #fff;"><strong>Top:</strong> Green Mandarin, Bergamot<br><strong>Heart:</strong> Ylang Ylang, Geranium<br><strong>Base:</strong> Musks, Amber</p>
-      <div style="display: flex; justify-content: center; gap: 0.5rem; padding: 1rem; min-width: 100%">
-        <img src="images/EmeraldVerde.jpg" style="flex: 1; height: 250px; object-fit: contain;" />
-        <img src="images/AmberRollOn.jpg" style="flex: 1; height: 250px; object-fit: contain;" />
+      videoUnisex.addEventListener("ended", () => {
+        indexUnisex = (indexUnisex + 1) % sourcesUnisex.length;
+        sourceUnisex.src = sourcesUnisex[indexUnisex];
+        videoUnisex.load();
+        videoUnisex.play().catch(err => console.error("Playback failed:", err));
+      });
+    </script>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; margin-bottom: 2rem; color: #000000;">UNISEX</h2>
+    <div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 5rem; max-width: 900px; margin: auto;">
+      <div style="width: 100%;">
+        <paypal-add-to-cart-button data-id="KEQ5J2BEW8KHW"></paypal-add-to-cart-button>
+        <script>cartPaypal.AddToCart({ id: "KEQ5J2BEW8KHW" })</script>
       </div>
-      <div style="display: flex; justify-content: center; gap: 1rem; padding: 1rem;">
-        <a href="https://www.paypal.com/ncp/payment/VDZ8X83WHYS3A" class="cta" style="flex: 1; background: #a78000; color: #fff; text-align: center; font-weight: bold; padding: 0.75rem; border-radius: 50px; text-decoration: none;">30ml Spray</a>
-        <a href="https://www.paypal.com/ncp/payment/2S8VXDE2QC4H8" class="cta" style="flex: 1; background: #a78000; color: #fff; text-align: center; font-weight: bold; padding: 0.75rem; border-radius: 50px; text-decoration: none;">10ml Roll-On</a>
+      <div style="width: 100%;">
+        <paypal-add-to-cart-button data-id="GXP7PPY2P7SC8"></paypal-add-to-cart-button>
+        <script>cartPaypal.AddToCart({ id: "GXP7PPY2P7SC8" })</script>
       </div>
     </div>
+  </section>
 
-    <!-- Rose Solis -->
-    <div class="product" style="background: linear-gradient(to right, #000000, #420000, #000000); width: 100%; min-width: 100%; max-width: 100%; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative;">
-      <div class="section-label" style="position: absolute; top: 10px; right: 10px; background: #a78000; color: #fff; padding: 0.3rem 0.7rem; font-size: 0.8rem; border-radius: 5px;"><strong>LIMITED STOCK!</strong></div>
-      <h3 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 1rem; color: #fff;">Rose Solis (N.48)</h3>
-      <p style="margin: 0 1rem; color: #fff;">Compared to the selenic theme of it's counterpart 'Blue Lunaris', this fragrance feels like wandering through a field of roses at golden hour - serene on the surface, yet exhilarating beneath.</p>
-      <p style="margin: 0.5rem 1rem; font-size: 0.95rem; color: #fff;"><strong>Top:</strong> Sweet Orange, Bergamot<br><strong>Heart:</strong> Rose, Peony<br><strong>Base:</strong> Tonka Bean, Amber</p>
-      <div style="display: flex; justify-content: center; gap: 0.5rem; padding: 1rem; min-width: 100%">
-        <img src="images/RoseSolis.jpg" style="flex: 1; height: 250px; object-fit: contain;" />
-        <img src="images/AmberRollOn.jpg" style="flex: 1; height: 250px; object-fit: contain;" />
-      </div>
-      <div style="display: flex; justify-content: center; gap: 1rem; padding: 1rem;">
-        <a href="https://www.paypal.com/ncp/payment/PFLWABZ8US57U" class="cta" style="flex: 1; background: #a78000; color: #fff; text-align: center; font-weight: bold; padding: 0.75rem; border-radius: 50px; text-decoration: none;">30ml Spray</a>
-        <a href="https://www.paypal.com/ncp/payment/Q2ZC9NBAXWT3E" class="cta" style="flex: 1; background: #a78000; color: #fff; text-align: center; font-weight: bold; padding: 0.75rem; border-radius: 50px; text-decoration: none;">10ml Roll-On</a>
-      </div>
+  <!-- Legal Links -->
+  <nav style="position: fixed; bottom: 0; width: 100%; height: 20px; background: #000000; color: #ffffff; padding: 0.75rem 2rem; z-index: 10;">
+    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 100%; margin: 0 auto;">
+      <a href="index.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Home</a>
+      <a href="contact.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Contact</a>
+      <a href="terms.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Terms of Service</a>
+      <a href="shipping.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Shipping Policy</a>
+      <a href="refund.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Refund Policy</a>
+      <a href="privacy.html" style="font-size: 1rem; color: #ffffff; text-decoration: none;">Privacy Policy</a>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- ✅ UNISEX -->
-<section style="padding: 3rem 2rem;">
-  <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; margin-bottom: 2rem; color: #000000;">UNISEX</h2>
-  <div class="products" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5rem; max-width: 100%; margin: auto;">
-
-    <!-- Tides Of Spice -->
-    <div class="product" style="background: linear-gradient(to right, #000000, #056388, #000000); width: 100%; min-width: 100%; max-width: 100%; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative;">
-      <div class="section-label" style="position: absolute; top: 10px; right: 10px; background: #a78000; color: #fff; padding: 0.3rem 0.7rem; font-size: 0.8rem; border-radius: 5px;"><strong>LIMITED STOCK!</strong></div>
-      <h3 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 1rem; color: #fff;">Tides Of Spice (N.11)</h3>
-      <p style="margin: 0 1rem; color: #fff;">Picture this: spiced currants drifting through a watery orchid, grounded by the quiet strength of vetiver and the golden warmth of amber. Bold at first, but subtle in the drydown...</p>
-      <p style="margin: 0.5rem 1rem; font-size: 0.95rem; color: #fff;"><strong>Top:</strong> Saffron, Pink Pepper<br><strong>Heart:</strong> Orchid, Sandalwood<br><strong>Base:</strong> Vetiver, Amber</p>
-      <div style="display: flex; justify-content: center; gap: 0.5rem; padding: 1rem; min-width: 100%">
-        <img src="images/TidesOfSpice.jpg" style="flex: 1; height: 250px; object-fit: contain;" />
-        <img src="images/AmberRollOn.jpg" style="flex: 1; height: 250px; object-fit: contain;" />
-      </div>
-      <div style="display: flex; justify-content: center; gap: 1rem; padding: 1rem;">
-        <a href="https://www.paypal.com/ncp/payment/AC4HQNUPDGMJQ" class="cta" style="flex: 1; background: #a78000; color: #fff; text-align: center; font-weight: bold; padding: 0.75rem; border-radius: 50px; text-decoration: none;">30ml Spray</a>
-        <a href="https://www.paypal.com/ncp/payment/BYMETWQGAHRPQ" class="cta" style="flex: 1; background: #a78000; color: #fff; text-align: center; font-weight: bold; padding: 0.75rem; border-radius: 50px; text-decoration: none;">10ml Roll-On</a>
-      </div>
-    </div>
-
-        <!-- Summers Walk -->
-    <div class="product" style="background: linear-gradient(to right, #000000, #404401, #000000); width: 100%; min-width: 100%; max-width: 100%; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative;">
-      <div class="section-label" style="position: absolute; top: 10px; right: 10px; background: #a78000; color: #fff; padding: 0.3rem 0.7rem; font-size: 0.8rem; border-radius: 5px;"><strong>LIMITED STOCK!</strong></div>
-      <h3 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 1rem; color: #fff;">Summers Walk (N.9)</h3>
-      <p style="margin: 0 1rem; color: #fff;">Soft pine and radiant musks enhance an elegant floral accord, where jasmine and magnolia bloom brightest in the drydown - though rose might quietly steal the show...</p>
-      <p style="margin: 0.5rem 1rem; font-size: 0.95rem; color: #fff;"><strong>Top:</strong> Pine, Musks<br><strong>Heart:</strong> Magnolia, Jasmine<br><strong>Base:</strong> Rose, Amber</p>
-      <div style="display: flex; justify-content: center; gap: 0.5rem; padding: 1rem; min-width: 100%">
-        <img src="images/SummersWalk.jpg" style="flex: 1; height: 250px; object-fit: contain;" />
-        <img src="images/AmberRollOn.jpg" style="flex: 1; height: 250px; object-fit: contain;" />
-      </div>
-      <div style="display: flex; justify-content: center; gap: 1rem; padding: 1rem;">
-        <a href="https://www.paypal.com/ncp/payment/E7AD2RZ6S57DS" class="cta" style="flex: 1; background: #a78000; color: #fff; text-align: center; font-weight: bold; padding: 0.75rem; border-radius: 50px; text-decoration: none;">30ml Spray</a>
-        <a href="https://www.paypal.com/ncp/payment/FEDWZRZMQVF9J" class="cta" style="flex: 1; background: #a78000; color: #fff; text-align: center; font-weight: bold; padding: 0.75rem; border-radius: 50px; text-decoration: none;">10ml Roll-On</a>
-      </div>
-    </div>
-  </div>
-</section>
+</body>
+</html>
