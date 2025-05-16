@@ -63,8 +63,36 @@
   </nav>
     <body style="font-family: 'Inter', sans-serif; background: #fafafa; color: #333; line-height: 1; padding: 0 0 40px 0; margin: 0;">
 
-<!-- ✅ CONTACT -->
-<section id="contact" style="max-width: 100%; margin: 0 auto; background: transparent; text-align: left; color: #000; font-size: 1.25rem; line-height: 1.8; padding-top: 3rem;">
+  <!-- BACKGROUND VIDEO-->
+  <section id="him" style="position: relative; overflow: hidden; padding: 3rem 2rem;">
+    <video id="video-him" autoplay muted playsinline style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      z-index: -1;
+      filter: brightness(0.75);">
+      <source id="source-him" src="videos/OceanTide.mp4" type="video/mp4">
+    </video>
+    <script>
+      const sourcesHim = ["videos/OceanTide(reverse).mp4", "videos/OceanTide(reverse).mp4"];
+      let indexHim = 0;
+      const videoHim = document.getElementById("video-him");
+      const sourceHim = document.getElementById("source-him");
+
+      videoHim.addEventListener("ended", () => {
+        indexHim = (indexHim + 1) % sourcesHim.length;
+        sourceHim.src = sourcesHim[indexHim];
+        videoHim.load();
+        videoHim.play().catch(err => console.error("Playback failed:", err));
+      });
+    </script>
+    
+    <!-- ✅ CONTACT -->
+<section id="contact" style="max-width: 100%; margin: 0 auto; background: transparent; text-align: left; color: #000; font-size: 1rem; line-height: 3; padding-top: 5rem;">
   <h2>Contact Me!</h2>
   <p>Have a question or scent request?</p>
   <ul style="list-style: none; padding: 0;">
