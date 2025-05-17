@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="T7A6EMMB2J5ZE"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="max-width=device-max-width, initial-scale=1.0" />
   <title>Al-Qureshi Perfumes</title>
-  <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="T7A6EMMB2J5ZE"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 60px; /* Optional: adds spacing to account for fixed nav */
     }
-    paypal-add-to-cart-button {
-      display: block;
-      margin-bottom: 1rem;
-    }
-    paypal-add-to-cart-button > div > div > div > div.paypal-button-label {
-      white-space: normal !important;
-    }
-
-</style>
+    </style>
 </head>
 
 <body style="font-family: 'Inter', sans-serif; background: #fafafa; color: #333; line-height: 1.2; padding: 0 0 40px 0; margin: 0;">
@@ -44,27 +37,26 @@
     </h1>
   </header>
 
-  <!-- Gold Nav Bar -->
-  <nav style="position: sticky; top: 0; z-index: 5; background: rgba(0, 0, 0, 0.8); display: flex; justify-content: center; gap: 2rem; align-items: center; max-width: 100%; height: 45px; font-weight: bold; font-family: 'Inter', sans-serif;">
-    <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
-    <script>
-      cartPaypal.Cart({ id: "pp-view-cart" })
-    </script>
-    <a href="#him" style="font-size: 1rem; color: #ffffff; text-decoration: none; text-align: center"">For Him</a>
-    <a href="#her" style="font-size: 1rem; color: #ffffff; text-decoration: none; text-align: center"">For Her</a>
-    <a href="#unisex" style="font-size: 1rem; color: #ffffff; text-decoration: none; text-align: center";">Unisex</a>
+  <!-- Grey Nav Bar -->
+  <nav style="position: sticky; top: 0; z-index: 5; background: rgba(0, 0, 0, 0.9); display: flex; justify-content: center; gap: 2rem; align-items: center; max-width: 100%; height: 45px; font-weight: bold; font-family: 'Inter', sans-serif;">
+<a href="#him" style="font-size: 0.8rem; color: #ffffff; text-decoration: none; text-align: center"">For Him</a>
+    <a href="#her" style="font-size: 0.8rem; color: #ffffff; text-decoration: none; text-align: center"">For Her</a>
+    <a href="#unisex" style="font-size: 0.8rem; color: #ffffff; text-decoration: none; text-align: center";">Unisex</a>
   </nav>
 
     <!-- Legal Links -->
-  <nav style="position: fixed; bottom: 0; z-index: 5; background: #000000; display: flex; justify-content: center; gap: 0.8rem; align-items: center; width: 100%; height: 35px; font-weight: bold; font-family: 'Inter', sans-serif;">
-      <a href="contact.html" style="font-size: 0.6rem; color: #ffffff; text-decoration: none; text-align: center; white-space: nowrap;">Contact</a>
-      <a href="terms.html" style="font-size: 0.6rem; color: #ffffff; text-decoration: none; text-align: center; white-space: nowrap">Terms of Service</a>
-      <a href="shipping.html" style="font-size: 0.6rem; color: #ffffff; text-decoration: none; text-align: center; white-space: nowrap">Shipping Policy</a>
-      <a href="refund.html" style="font-size: 0.6rem; color: #ffffff; text-decoration: none; text-align: center; white-space: nowrap;">Refund Policy</a>
-      <a href="privacy.html" style="font-size: 0.6rem; color: #ffffff; text-decoration: none; text-align: center; white-space: nowrap">Privacy Policy</a>
+  <nav style="position: fixed; bottom: 0; z-index: 5; background: rgba(0, 0, 0, 0.9); display: flex; justify-content: center; gap: 1rem; align-items: center; width: 100%; height: 45px; font-weight: bold; font-family: 'Inter', sans-serif;">
+     <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
+<script>
+  cartPaypal.Cart({ id: "pp-view-cart" })
+</script>
+      <a href="contact.html" style="font-size: 0.5rem; color: #ffffff; text-decoration: none; text-align: center;">Contact</a>
+      <a href="terms.html" style="font-size: 0.5rem; color: #ffffff; text-decoration: none; text-align: center">Terms of Service</a>
+      <a href="shipping.html" style="font-size: 0.5rem; color: #ffffff; text-decoration: none; text-align: center">Shipping Policy</a>
+      <a href="refund.html" style="font-size: 0.5rem; color: #ffffff; text-decoration: none; text-align: center;">Refund Policy</a>
+      <a href="privacy.html" style="font-size: 0.5rem; color: #ffffff; text-decoration: none; text-align: center">Privacy Policy</a>
   </nav>
-    <body style="font-family: 'Inter', sans-serif; background: #fafafa; color: #333; line-height: 1; padding: 0 0 40px 0; margin: 0;">
-
+  
   <!-- Image / Intro -->
   <section style="position: relative; width: 100%; height: 400px; overflow: hidden;">
     <img src="images/showcase1.jpg" alt="Perfume Showcase" style="width: 100%; height: 500px; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;" />
