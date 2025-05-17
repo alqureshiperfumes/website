@@ -37,7 +37,7 @@
   "></div>
 
   <!-- Header -->
-  <header style="background: linear-gradient(to right, #000000, #000000, #0132d1, #0132d1, #0132d1, #0132d1, #003cff, #000000, #000000); color: #ffffff; padding: 0.5rem 0.5rem 0.5rem; text-align: center;">
+  <header style="background: #000000; color: #ffffff; padding: 0.5rem 0.5rem 0.5rem; text-align: center;">
     <h1 style="font-family: 'Playfair Display', serif; font-size: 5rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 1rem;">
           <a href="index.html">
       <img src="images/logogold.png" alt="Al-Qureshi Logo" style="height: 100px; max-width: 100%;" />
@@ -45,14 +45,14 @@
   </header>
 
   <!-- Gold Nav Bar -->
-  <nav style="position: sticky; top: 0; z-index: 5; background:  #ffd140; display: flex; justify-content: center; gap: 2rem; align-items: center; max-width: 100%; height: 45px; font-weight: bold; font-family: 'Inter', sans-serif;">
+  <nav style="position: sticky; top: 0; z-index: 5; background: rgba(0, 0, 0, 0.8); display: flex; justify-content: center; gap: 2rem; align-items: center; max-width: 100%; height: 45px; font-weight: bold; font-family: 'Inter', sans-serif;">
     <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
     <script>
       cartPaypal.Cart({ id: "pp-view-cart" })
     </script>
-    <a href="#him" style="font-size: 1rem; color: #000000; text-decoration: none; text-align: center"">For Him</a>
-    <a href="#her" style="font-size: 1rem; color: #000000; text-decoration: none; text-align: center"">For Her</a>
-    <a href="#unisex" style="font-size: 1rem; color: #000000; text-decoration: none; text-align: center";">Unisex</a>
+    <a href="#him" style="font-size: 1rem; color: #ffffff; text-decoration: none; text-align: center"">For Him</a>
+    <a href="#her" style="font-size: 1rem; color: #ffffff; text-decoration: none; text-align: center"">For Her</a>
+    <a href="#unisex" style="font-size: 1rem; color: #ffffff; text-decoration: none; text-align: center";">Unisex</a>
   </nav>
 
     <!-- Legal Links -->
@@ -67,10 +67,10 @@
 
   <!-- Image / Intro -->
   <section style="position: relative; width: 100%; height: 400px; overflow: hidden;">
-    <img src="images/showcase1.jpg" alt="Perfume Showcase" style="width: 100%; height: 400px; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;" />
-    <div style="position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #000000; color: #ffffff; padding: 1rem; border-radius: 5px; font-size: 1rem; font-family: 'Playfair Display', serif; text-align: center; max-width: 100%;">
-      <p>From a tiny seed of a dream, a world of scents grew.</p>
-      <p>I gathered rare and precious things, creating stories for you.</p>
+    <img src="images/showcase1.jpg" alt="Perfume Showcase" style="width: 100%; height: 500px; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;" />
+<div style="position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold; background: rgba(0, 0, 0, 0.8); color: #ffffff; padding: 0.5rem; border-radius: 1px; font-size: 1rem; font-family: 'Playfair Display', serif; text-align: center; max-width: 90%;">
+      <p>From a lifelong dream, a world of scents grew.</p>
+      <p>I gathered precious materials, rare things too.</p>
       <p>Some feel vintage, others boldly modern.</p>
       <p>Let your senses wonder, to find your pattern.</p>
     </div>
@@ -130,10 +130,10 @@
       opacity: 0.5;
       z-index: -1;
       filter: brightness(0.75);">
-      <source id="source-unisex" src="videos/OceanTide(f).mp4" type="video/mp4">
+      <source id="source-her" src="videos/OceanTide(f).mp4" type="video/mp4">
     </video>
     <script>
-      const sourcesHim = ["videos/OceanTide(f).mp4", "videos/OceanTide(f)(reverse).mp4"];
+      const sourcesHer = ["videos/OceanTide(f).mp4", "videos/OceanTide(f)(reverse).mp4"];
       let indexHer = 0;
       const videoHer = document.getElementById("video-her");
       const sourceHer = document.getElementById("source-her");
@@ -175,7 +175,7 @@
       <source id="source-unisex" src="videos/OceanTide(u).mp4" type="video/mp4">
     </video>
     <script>
-      const sourcesHim = ["videos/OceanTide(u).mp4", "videos/OceanTide(u)(reverse).mp4"];
+      const sourcesUnisex = ["videos/OceanTide(u).mp4", "videos/OceanTide(u)(reverse).mp4"];
       let indexUnisex = 0;
       const videoUnisex = document.getElementById("video-unisex");
       const sourceUnisex = document.getElementById("source-unisex");
