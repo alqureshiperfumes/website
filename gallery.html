@@ -58,43 +58,15 @@
       <a href="refund.html" style="font-size: 0.6rem; color: #ffffff; text-decoration: none; text-align: center;">Refunds</a>
       <a href="privacy.html" style="font-size: 0.6rem; color: #ffffff; text-decoration: none; text-align: center">Privacy</a>
   </nav>
-
-  <!-- BACKGROUND VIDEO-->
-    <video id="video-unisex" autoplay muted playsinline style="
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.2;
-      z-index: -1;
-      filter: brightness(0.75);">
-      <source id="source-unisex" src="videos/OceanTide.mp4" type="video/mp4">
-    </video>
-    <script>
-      const sourcesUnisex = ["videos/OceanTide.mp4", "videos/OceanTide(reverse).mp4"];
-      let indexUnisex = 0;
-      const videoUnisex = document.getElementById("video-unisex");
-      const sourceUnisex = document.getElementById("source-unisex");
-
-      videoUnisex.addEventListener("ended", () => {
-        indexUnisex = (indexUnisex + 1) % sourcesUnisex.length;
-        sourceUnisex.src = sourcesUnisex[indexUnisex];
-        videoUnisex.load();
-        videoUnisex.play().catch(err => console.error("Playback failed:", err));
-      });
-    </script>
-
-<!-- ✅ SHIPPING POLICY -->
-<section id="shipping" style="max-width: 90%; height: 100%; margin: 0 auto; background: transparent; text-align: left; color: #000; font-size: 0.65rem; line-height: 2; padding-top: 1rem;">
-    <h2>Shipping Policy</h2>
-    <p><strong>Delivery Times:</strong></p>
-    <ul style="list-style: none; padding: 0;">
-      <li><strong>UK ONLY</strong>: Royal Mail Signed For® Delivery (2–4 business days)</li>
-    </ul>
-    <p><strong>Processing Time:</strong> Orders are processed within 1–2 business days.</p>
-    <p><strong>Tracking:</strong> You will get a tracking email once the order has been posted.</p>
-  </section>
-
   
+  <!-- Images -->
+<section style="display: flex; flex-wrap: wrap; width: 100%; height: auto; overflow: hidden;">
+  <img src="images/showcase1.jpg" alt="Perfume Showcase 1" style="width: 50%; height: 550px; object-fit: cover;" />
+  <img src="images/showcase2.jpg" alt="Perfume Showcase 2" style="width: 50%; height: 550px; object-fit: cover;" />
+  <img src="images/showcase3.jpg" alt="Perfume Showcase 3" style="width: 50%; height: 550px; object-fit: cover;" />
+</section>
+
+
+
+</body>
+</html>
