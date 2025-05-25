@@ -37,9 +37,14 @@
     </h1>
   </header>
 
+<!-- ANNOUNCEMENTS -->
+  <nav style="position: sticky; top: 0; z-index: 5; background: rgba(251, 255, 0, 0.9); display: flex; justify-content: center; gap: 1rem; align-items: center; max-width: 100%; height: 25px; font-weight: bold; font-family: 'Inter', sans-serif;">
+    <a href="#him" style="font-size: 0.8rem; color: #000000; text-decoration: none; text-align: center">FREE GIFT WITH ORDER!</a>
+</nav>
+
   <!-- Grey Nav Bar -->
   <nav style="position: sticky; top: 0; z-index: 5; background: rgba(0, 0, 0, 0.9); display: flex; justify-content: center; gap: 1rem; align-items: center; max-width: 100%; height: 40px; font-weight: bold; font-family: 'Inter', sans-serif;">
-    <a href="index.html#him" style="font-size: 0.8rem; color: #ffffff; text-decoration: none; text-align: center">Back To Products</a>
+    <a href="index.html#her" style="font-size: 0.8rem; color: #ffffff; text-decoration: none; text-align: center">Back To Products</a>
 
     <a href="https://www.instagram.com/alqureshiperfumes/">
   <img src="images/instagramlogo.png" alt="Instagram Logo" style="height: 30px; max-width: 100%;" />
@@ -63,43 +68,44 @@
       <a href="refund.html" style="font-size: 0.6rem; color: #ffffff; text-decoration: none; text-align: center;">Refunds</a>
       <a href="privacy.html" style="font-size: 0.6rem; color: #ffffff; text-decoration: none; text-align: center">Privacy</a>
   </nav>
-  
-<!-- Responsive Image Gallery -->
-<p></p><style>
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* space between images */
-    justify-content: center;
-  }
 
-  .gallery img {
-    width: 100%;
-    max-width: 48%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
+  <!-- FOR HER VIDEO-->
+  <section id="her" style="position: relative; overflow: hidden; padding: 3rem 2rem;">
+    <video id="video-her" autoplay muted playsinline style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      z-index: -1;
+      filter: brightness(0.75);">
+      <source id="source-her" src="videos/OceanTide(f).mp4" type="video/mp4">
+    </video>
+    <script>
+      const sourcesHer = ["videos/OceanTide(f).mp4", "videos/OceanTide(f)(reverse).mp4"];
+      let indexHer = 0;
+      const videoHer = document.getElementById("video-her");
+      const sourceHer = document.getElementById("source-her");
 
-  @media (max-width: 768px) {
-    .gallery img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-</style>
-
-<section class="gallery">
-  <img src="images/showcase1.jpg" alt="Perfume Showcase 1" />
-  <img src="images/showcase2.jpg" alt="Perfume Showcase 2" />
-  <img src="images/showcase3.jpg" alt="Perfume Showcase 3" />
-  <img src="images/showcase4.jpg" alt="Perfume Showcase 4" />
-  <img src="images/showcase5.jpg" alt="Perfume Showcase 5" />
-  <img src="images/showcase6.jpg" alt="Perfume Showcase 6" />
-</section>
+      videoHer.addEventListener("ended", () => {
+        indexHer = (indexHer + 1) % sourcesHer.length;
+        sourceHer.src = sourcesHer[indexHer];
+        videoHer.load();
+        videoHer.play().catch(err => console.error("Playback failed:", err));
+      });
+    </script>
 
 
-
+  <!-- EMERALD VERDE-->
+    <div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 5rem; max-width: 100%; margin: auto;">
+      <div style="max-width: 90%;">
+        <paypal-add-to-cart-button data-id="5E2WNG42HG94Q"></paypal-add-to-cart-button>
+        <script>cartPaypal.AddToCart({ id: "5E2WNG42HG94Q" })</script>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
