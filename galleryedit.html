@@ -66,7 +66,7 @@
   
   <!-- BACKGROUND VIDEO-->
     <video id="video-unisex" autoplay muted playsinline style="
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
@@ -91,92 +91,16 @@
       });
     </script>
     
-    <!-- Responsive Image Gallery -->
- <p></p>
-<style>
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .image-container {
-    position: relative;
-    flex: 1 1 100%;
-    max-width: 48%;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 8px;
-  }
-
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  .image-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 2px;
-    font-size: 0.75rem;
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    max-width: 90%;
-    font-weight: bold;
-  }
-
-  @media (max-width: 750px) {
-    .image-container {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .image-container img {
-      min-height: 100%;
-    }
-
-    .image-text {
-      font-size: 0.7rem;
-      padding: 0.4rem;
-    }
-  }
-</style>
-
-<section class="gallery">
-  <div class="image-container">
-    <img src="images/showcase1.jpg" alt="Perfume Showcase 1" />
-    <div class="image-text">I sourced unique and unusual ingredients, rich in purity and depth.</div>
-  </div>
-  <div class="image-container">
-    <img src="images/showcase2.jpg" alt="Perfume Showcase 2" />
-    <div class="image-text">Holding on to the perfect concoctions, experimenting with the failed ones.</div>
-  </div>
-  <div class="image-container">
-    <img src="images/showcase3.jpg" alt="Perfume Showcase 3" />
-    <div class="image-text">Over time, I learnt which materials work together, and also how to create a mess!</div>
-  </div>
-  <div class="image-container">
-    <img src="images/showcase4.jpg" alt="Perfume Showcase 4" />
-    <div class="image-text">I then carefully sourced each bottle to make sure they look elegant, feel premium and spray well</div>
-  </div>
-  <div class="image-container">
-    <img src="images/showcase5.jpg" alt="Perfume Showcase 5" />
-    <div class="image-text">Not to mention the 33.3% oil-concentrated roll-ons, which contain a high quality long-lasting scent </div>
-  </div>
-  <div class="image-container">
-    <img src="images/showcase6.jpg" alt="Perfume Showcase 6" />
-    <div class="image-text">But I never forget the perfumes which inspired me to start my journey as a perfumist!</div>
-  </div>
-</section>
-
+  <!-- Image / Intro 1 -->
+  <section style="position: relative; min-width: 100%; min-height: 100%; overflow: hidden;">
+    <img src="images/showcase1.jpg" alt="Perfume Showcase" style="min-width: 50%; min-height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;" />
+<div style="position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold; background: rgba(0, 0, 0, 0.8); color: #ffffff; padding: 0.5rem; border-radius: 1px; font-size: 0.9rem; font-family: 'Playfair Display', serif; text-align: center; max-width: 90%;">
+      <p>From a lifelong dream, a world of scents grew.</p>
+      <p>I gathered precious materials, rare things too.</p>
+      <p>Some feel vintage, others boldly modern.</p>
+      <p>Let your senses wonder, to find your pattern.</p>
+    </div>
+  </section>
 
 
 
