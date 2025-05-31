@@ -69,31 +69,30 @@
       <a href="privacy.html" style="font-size: 0.6rem; color: #ffffff; text-decoration: none; text-align: center">Privacy</a>
   </nav>
 
-  <!-- THANK YOU VIDEO-->
-  <section id="him" style="position: relative; overflow: hidden; padding: 3rem 2rem;">
-    <video id="video-him" autoplay muted playsinline style="
+  <!-- BACKGROUND VIDEO-->
+    <video id="video-unisex" autoplay muted playsinline style="
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.95;
+      opacity: 1;
       z-index: -1;
       filter: brightness(0.75);">
-      <source id="source-him" src="videos/OceanTide(m).mp4" type="video/mp4">
+      <source id="source-unisex" src="videos/OceanTide(i).mp4" type="video/mp4">
     </video>
     <script>
-      const sourcesHim = ["videos/OceanTide(m).mp4", "videos/OceanTide(m)(reverse).mp4"];
-      let indexHim = 0;
-      const videoHim = document.getElementById("video-him");
-      const sourceHim = document.getElementById("source-him");
+      const sourcesUnisex = ["videos/OceanTide(i).mp4", "videos/OceanTide(i)(reverse).mp4"];
+      let indexUnisex = 0;
+      const videoUnisex = document.getElementById("video-unisex");
+      const sourceUnisex = document.getElementById("source-unisex");
 
-      videoHim.addEventListener("ended", () => {
-        indexHim = (indexHim + 1) % sourcesHim.length;
-        sourceHim.src = sourcesHim[indexHim];
-        videoHim.load();
-        videoHim.play().catch(err => console.error("Playback failed:", err));
+      videoUnisex.addEventListener("ended", () => {
+        indexUnisex = (indexUnisex + 1) % sourcesUnisex.length;
+        sourceUnisex.src = sourcesUnisex[indexUnisex];
+        videoUnisex.load();
+        videoUnisex.play().catch(err => console.error("Playback failed:", err));
       });
     </script>
 

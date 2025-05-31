@@ -70,8 +70,8 @@
   </nav>
     
 <!-- INTRO VIDEO SECTION -->
-<section id="unisex" style="position: relative; overflow: hidden; height: 600px;">
-  <video id="video-unisex" autoplay muted playsinline style="
+<section id="intro" style="position: relative; overflow: hidden; height: 600px;">
+  <video id="video-intro" autoplay muted playsinline style="
     position: absolute;
     top: 0;
     left: 0;
@@ -81,15 +81,15 @@
     opacity: 1;
     z-index: -1;
     filter: brightness(0.75);">
-    <source id="source-unisex" src="videos/OceanTide(i).mp4" type="video/mp4">
+    <source id="source-intro" src="videos/OceanTide(i).mp4" type="video/mp4">
   </video>
 
     <!-- BACKGROUND VIDEO-->
     <script>
-      const sourcesUnisex = ["videos/OceanTide(i).mp4", "videos/OceanTide(i)(reverse).mp4"];
-      let indexUnisex = 0;
-      const videoUnisex = document.getElementById("video-unisex");
-      const sourceUnisex = document.getElementById("source-unisex");
+      const sourcesIntro = ["videos/OceanTide(i).mp4", "videos/OceanTide(i)(reverse).mp4"];
+      let indexIntro = 0;
+      const videoIntro = document.getElementById("video-unisex");
+      const sourceIntro = document.getElementById("source-unisex");
 
       videoUnisex.addEventListener("ended", () => {
         indexUnisex = (indexUnisex + 1) % sourcesUnisex.length;
@@ -106,7 +106,7 @@
   left: 50%; 
   transform: translate(-50%, -50%);
   font-weight: bold; 
-  background: rgba(0, 0, 0, 0.8); 
+  background: #000000; 
   color: #ffffff; 
   padding: 1rem 2rem; 
   border-radius: 100px; 
@@ -153,7 +153,9 @@
     </script>
 
   <!-- FOR HIM PRODUCTS-->
-<h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 3rem; font-weight: bold; text-align: center; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">FOR HIM</h2>
+<div style="text-align: center;">
+<h2 style="display: inline-block; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 3rem; font-weight: bold; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem 2rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">FOR HIM
+</div>
 <div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: auto; padding: 1rem;">
 
   <!-- Cassis Cuir -->
@@ -212,7 +214,9 @@
     </script>
 
   <!-- FOR HER PRODUCTS-->
-<h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 3rem; font-weight: bold; text-align: center; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">FOR HER</h2>
+<div style="text-align: center;">
+<h2 style="display: inline-block; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 3rem; font-weight: bold; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem 2rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">FOR HER
+</div>
 <div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: auto; padding: 1rem;">
 
   <!-- Emerald Verde -->
@@ -271,7 +275,9 @@
     </script>
 
   <!-- UNISEX PRODUCTS-->
-<h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 3rem; font-weight: bold; text-align: center; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">UNISEX</h2>
+<div style="text-align: center;">
+<h2 style="display: inline-block; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 3rem; font-weight: bold; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem 2rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">UNISEX
+</div>
 <div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: auto; padding: 1rem;">
 
   <!-- Tides Of Spice -->
