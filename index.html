@@ -78,11 +78,26 @@
     width: 100%;
     height: 600px;
     object-fit: cover;
-    opacity: 0.5;
+    opacity: 1;
     z-index: -1;
     filter: brightness(0.75);">
-    <source id="source-unisex" src="videos/OceanTide(u).mp4" type="video/mp4">
+    <source id="source-unisex" src="videos/OceanTide(i).mp4" type="video/mp4">
   </video>
+
+    <!-- BACKGROUND VIDEO-->
+    <script>
+      const sourcesUnisex = ["videos/OceanTide(i).mp4", "videos/OceanTide(i)(reverse).mp4"];
+      let indexUnisex = 0;
+      const videoUnisex = document.getElementById("video-unisex");
+      const sourceUnisex = document.getElementById("source-unisex");
+
+      videoUnisex.addEventListener("ended", () => {
+        indexUnisex = (indexUnisex + 1) % sourcesUnisex.length;
+        sourceUnisex.src = sourcesUnisex[indexUnisex];
+        videoUnisex.load();
+        videoUnisex.play().catch(err => console.error("Playback failed:", err));
+      });
+    </script>
 
   <!-- INTRO TEXT -->
 <div style="
@@ -236,7 +251,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.9;
+      opacity: 0.5;
       z-index: -1;
       filter: brightness(0.75);">
       <source id="source-unisex" src="videos/OceanTide(u).mp4" type="video/mp4">
