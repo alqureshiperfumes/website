@@ -37,9 +37,9 @@
     </h1>
   </header>
 
-<!-- ANNOUNCEMENTS -->
-  <nav style="position: sticky; top: 0; z-index: 5; background: rgba(251, 255, 0, 0.9); display: flex; justify-content: center; gap: 1rem; align-items: center; max-width: 100%; height: 40px; font-weight: bold; font-family: 'Inter', sans-serif;">
-    <a href="#him" style="font-size: 0.8rem; color: #000000; text-decoration: none; text-align: center">FREE COPY OF MY BOOK - LIMITED TO THE FIRST 10 ORDERS!!!</a>
+<!-- FREE BOOK -->
+  <nav style="position: sticky; top: 0; z-index: 5; background: rgba(251, 255, 0, 0.9); display: flex; justify-content: center; gap: 1rem; align-items: center; max-width: 100%; height: 60px; font-weight: bold; font-family: 'Inter', sans-serif;">
+    <a href="#him" style="font-size: 0.8rem; color: #000000; text-decoration: none; text-align: center">🚚 FREE DELIVERY 🚚 <p></p>🎉 FREE COPY OF MY BOOK FOR FIRST 10 ORDERS! 🎉 </a>
 </nav>
 
 <!-- Grey Nav Bar -->
@@ -88,14 +88,14 @@
     <script>
       const sourcesIntro = ["videos/OceanTide(i).mp4", "videos/OceanTide(i)(reverse).mp4"];
       let indexIntro = 0;
-      const videoIntro = document.getElementById("video-unisex");
-      const sourceIntro = document.getElementById("source-unisex");
+      const videoIntro = document.getElementById("video-intro");
+      const sourceIntro = document.getElementById("source-intro");
 
-      videoUnisex.addEventListener("ended", () => {
-        indexUnisex = (indexUnisex + 1) % sourcesUnisex.length;
-        sourceUnisex.src = sourcesUnisex[indexUnisex];
-        videoUnisex.load();
-        videoUnisex.play().catch(err => console.error("Playback failed:", err));
+      videoIntro.addEventListener("ended", () => {
+        indexIntro = (indexIntro + 1) % sourcesIntro.length;
+        sourceIntro.src = sourcesIntro[indexIntro];
+        videoIntro.load();
+        videoIntro.play().catch(err => console.error("Playback failed:", err));
       });
     </script>
 
@@ -156,29 +156,48 @@
 <div style="text-align: center;">
 <h2 style="display: inline-block; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 3rem; font-weight: bold; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem 2rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">FOR HIM
 </div>
-<div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: auto; padding: 1rem;">
+<div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; max-width: 1200px; margin: auto; padding: 1rem;">
 
   <!-- Cassis Cuir -->
   <a href="cassiscuir.html" style="text-decoration: none; color: inherit;">
-    <div style="text-align: center; cursor: pointer; background: rgba(0, 0, 0, 0.8); border-radius: 80px; color: #ffffff; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">
-      <img src="images/CassisCuir.jpg" alt="Blue Lunaris" style="max-width: 100px; height: 150px; border-radius: 10px;">
-      <h3 style="margin-top: 1rem; font-size: 2rem; font-family: 'Playfair Display', serif;">Cassis Cuir</h3>
-            <h3 style="margin-top: 1rem; font-size: 0.8rem; font-family: 'Inter', serif;"><p>
-<p></p>Top: Blackcurrant, Saffron
-<p></p>Heart: Fir, Leather, Rose
-<p></p>Base: Woods, Amber</h3>
+    <div style="text-align: center; cursor: pointer; background: rgba(0, 0, 0, 0.9); border-radius: 100px; color: #ffffff; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">
+      <img src="images/CassisCuir.jpg" alt="Cassis Cuir" style="max-width: 100px; height: 150px; border-radius: 10px;">
+
+      <h3 style="margin-top: 1rem; font-size: 2rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> 
+  Cassis Cuir
+  <p></p>
+
+  <del><span style="color: red;">£39.99</span></del> <span style="color: green;">£28.49</span>
+</h3>
+
+<h3 style="margin-top: 1rem; font-size: 0.9rem; font-family: 'Inter', serif;">    
+  <p></p>Blackcurrant-infused smoky woods, with a forest-themed leather bite. Inspired by one of Tom Ford's bolder scents, I decided to the waters with this one. It's unusual, but definitely unique!
+  <p></p>Top: Blackcurrant, Saffron
+  <p></p>Heart: Fir, Leather, Rose
+  <p></p>Base: Woods, Amber
+</h3>
 </div>
 </a>
 
   <!-- Blue Lunaris -->
   <a href="bluelunaris.html" style="text-decoration: none; color: inherit;">
-    <div style="text-align: center; cursor: pointer; background: rgba(0, 0, 0, 0.8); border-radius: 80px; color: #ffffff; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">
+    <div style="text-align: center; cursor: pointer; background: rgba(0, 0, 0, 0.9); border-radius: 100px; color: #ffffff; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">
       <img src="images/BlueLunaris.jpg" alt="Blue Lunaris" style="max-width: 100px; height: 150px; border-radius: 10px;">
-      <h3 style="margin-top: 1rem; font-size: 2rem; font-family: 'Playfair Display', serif;">Blue Lunaris</h3>
-            <h3 style="margin-top: 1rem; font-size: 0.8rem; font-family: 'Inter', serif;"><p>
-<p></p>Top: Lemon, Bergamot, Sea Salt
-<p></p>Heart: Pink Pepper, Black Cherry
-<p></p>Base: Musks, Amber</h3>
+
+      <h3 style="margin-top: 1rem; font-size: 2rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> 
+  Blue Lunaris
+  <p></p>
+
+  <del><span style="color: red;">£39.99</span></del> <span style="color: green;">£26.99</span>
+</h3>
+
+<h3 style="margin-top: 1rem; font-size: 0.9rem; font-family: 'Inter', serif;">    
+  <p></p>The entwined harmony of cherry and pepper beneath a moonlit sky, adrift in a salted sea where citrus-laced waves crash over velvety musks and shadowed amber.
+  <p></p>Top: Lemon, Bergamot, Sea Salt
+  <p></p>Heart: Pink Pepper, Black Cherry
+  <p></p>Base: Musks, Amber
+
+</h3>
 </div>
 </a>
 
@@ -217,29 +236,49 @@
 <div style="text-align: center;">
 <h2 style="display: inline-block; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 3rem; font-weight: bold; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem 2rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">FOR HER
 </div>
-<div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: auto; padding: 1rem;">
+<div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; max-width: 1200px; margin: auto; padding: 1rem;">
 
   <!-- Emerald Verde -->
   <a href="emeraldverde.html" style="text-decoration: none; color: inherit;">
-    <div style="text-align: center; cursor: pointer; background: rgba(0, 0, 0, 0.8); border-radius: 80px; color: #ffffff; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">
+    <div style="text-align: center; cursor: pointer; background: rgba(0, 0, 0, 0.9); border-radius: 100px; color: #ffffff; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">
       <img src="images/EmeraldVerde.jpg" alt="Blue Lunaris" style="max-width: 100px; height: 150px; border-radius: 10px;">
-      <h3 style="margin-top: 1rem; font-size: 2rem; font-family: 'Playfair Display', serif;">Emerald Verde</h3>
-            <h3 style="margin-top: 1rem; font-size: 0.8rem; font-family: 'Inter', serif;"><p>
-<p></p>Top: Green Mandarin, Bergamot
-<p></p>Heart: Ylang Ylang, Geranium
-<p></p>Base: Musks, Amber</h3>
+
+      <h3 style="margin-top: 1rem; font-size: 2rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> 
+  Emerald Verde
+  <p></p>
+
+  <del><span style="color: red;">£39.99</span></del> <span style="color: green;">£28.49</span>
+</h3>
+
+<h3 style="margin-top: 1rem; font-size: 0.9rem; font-family: 'Inter', serif;">    
+  <p></p>A bright bouquet of florals and citrus, rounded by a smooth touch of musk and sandalwood. If you are looking for the perfect feminine fragrance for a special occasion, then look no further!
+  <p></p>Top: Green Mandarin, Bergamot
+  <p></p>Heart: Ylang Ylang, Geranium
+  <p></p>Base: Musks, Amber
+
+</h3>
 </div>
 </a>
 
   <!-- Rose Solis -->
   <a href="rosesolis.html" style="text-decoration: none; color: inherit;">
-    <div style="text-align: center; cursor: pointer; background: rgba(0, 0, 0, 0.8); border-radius: 80px; color: #ffffff; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">
+    <div style="text-align: center; cursor: pointer; background: rgba(0, 0, 0, 0.9); border-radius: 100px; color: #ffffff; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">
       <img src="images/RoseSolis.jpg" alt="Blue Lunaris" style="max-width: 100px; height: 150px; border-radius: 10px;">
-      <h3 style="margin-top: 1rem; font-size: 2rem; font-family: 'Playfair Display', serif;">Rose Solis</h3>
-            <h3 style="margin-top: 1rem; font-size: 0.8rem; font-family: 'Inter', serif;"><p>
-<p></p>Top: Sweet Orange, Bergamot
-<p></p>Heart: Rose, Peony
-<p></p>Base: Tonka Bean, Amber</h3>
+
+      <h3 style="margin-top: 1rem; font-size: 2rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> 
+  Rose Solis
+  <p></p>
+
+  <del><span style="color: red;">£39.99</span></del> <span style="color: green;">£27.99</span>
+</h3>
+
+<h3 style="margin-top: 1rem; font-size: 0.9rem; font-family: 'Inter', serif;">    
+  <p></p>Compared to the selenic theme of it's counterpart 'Blue Lunaris', this fragrance feels like wandering through a field of roses at golden hour - serene on the surface, exhilarating beneath.
+  <p></p>Top: Sweet Orange, Bergamot
+  <p></p>Heart: Rose, Peony
+  <p></p>Base: Tonka Bean, Amber
+
+</h3>
 </div>
 </a>
 
@@ -278,29 +317,49 @@
 <div style="text-align: center;">
 <h2 style="display: inline-block; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 3rem; font-weight: bold; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem 2rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">UNISEX
 </div>
-<div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: auto; padding: 1rem;">
+<div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; max-width: 1200px; margin: auto; padding: 1rem;">
 
   <!-- Tides Of Spice -->
   <a href="tidesofspice.html" style="text-decoration: none; color: inherit;">
-    <div style="text-align: center; cursor: pointer; background: rgba(0, 0, 0, 0.8); border-radius: 80px; color: #ffffff; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">
+    <div style="text-align: center; cursor: pointer; background: rgba(0, 0, 0, 0.9); border-radius: 100px; color: #ffffff; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">
       <img src="images/TidesOfSpice.jpg" alt="Blue Lunaris" style="max-width: 100px; height: 150px; border-radius: 10px;">
-      <h3 style="margin-top: 1rem; font-size: 2rem; font-family: 'Playfair Display', serif;">Tides Of Spice</h3>
-            <h3 style="margin-top: 1rem; font-size: 0.8rem; font-family: 'Inter', serif;"><p>
-<p></p>Top: Saffron, Pink Pepper
-<p></p>Heart: Orchid, Sandalwood
-<p></p>Base: Vetiver, Amber</h3>
+
+      <h3 style="margin-top: 1rem; font-size: 2rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> 
+  Tides Of Spice
+  <p></p>
+
+  <del><span style="color: red;">£39.99</span></del> <span style="color: green;">£28.49</span>
+</h3>
+
+<h3 style="margin-top: 1rem; font-size: 0.9rem; font-family: 'Inter', serif;">    
+  <p></p>Picture this: spiced currants drifting through a watery orchid, grounded by the quiet strength of vetiver and the golden warmth of amber. Bold at first, but subtle in the drydown...
+  <p></p>Top: Saffron, Pink Pepper
+  <p></p>Heart: Orchid, Sandalwood
+  <p></p>Base: Vetiver, Amber
+
+</h3>
 </div>
 </a>
 
   <!-- Summers Walk -->
   <a href="summerswalk.html" style="text-decoration: none; color: inherit;">
-    <div style="text-align: center; cursor: pointer; background: rgba(0, 0, 0, 0.8); border-radius: 80px; color: #ffffff; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">
+    <div style="text-align: center; cursor: pointer; background: rgba(0, 0, 0, 0.9); border-radius: 100px; color: #ffffff; padding: 1rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">
       <img src="images/SummersWalk.jpg" alt="Blue Lunaris" style="max-width: 100px; height: 150px; border-radius: 10px;">
-      <h3 style="margin-top: 1rem; font-size: 2rem; font-family: 'Playfair Display', serif;">Summers Walk</h3>
-            <h3 style="margin-top: 1rem; font-size: 0.8rem; font-family: 'Inter', serif;"><p>
-<p></p>Top: Pine, Musks
-<p></p>Heart: Magnolia, Jasmine
-<p></p>Base: Rose, Amber</h3>
+
+      <h3 style="margin-top: 1rem; font-size: 2rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> 
+  Summers Walk
+  <p></p>
+
+  <del><span style="color: red;">£39.99</span></del> <span style="color: green;">£29.99</span>
+</h3>
+
+<h3 style="margin-top: 1rem; font-size: 0.9rem; font-family: 'Inter', serif;">    
+  <p></p>Soft pine and radiant musks enhance an elegant floral accord, where jasmine and magnolia bloom brightest in the drydown - though rose might quietly steal the show...
+  <p></p>Top: Pine, Musks
+  <p></p>Heart: Magnolia, Jasmine
+  <p></p>Base: Rose, Amber
+
+</h3>
 </div>
 </a>
 
