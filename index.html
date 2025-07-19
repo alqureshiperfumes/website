@@ -6,12 +6,23 @@
   <meta name="viewport" content="max-width=device-max-width, initial-scale=1.0" />
   <title>Al-Qureshi Perfumes</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 60px; /* Optional: adds spacing to account for fixed nav */
-    }
-    </style>
+<style>
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+  }
+
+  /* Hover glow ONLY for product cards */
+  .products a > div {
+    transition: all 0.1s ease;
+  }
+
+  .products a > div:hover {
+    transform: translateY(-4px) scale(1.015);
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.3), 0 6px 20px rgba(0, 0, 0, 0.5);
+  }
+</style>
+
 </head>
 
 <body style="font-family: 'Inter', sans-serif; background: #fafafa; color: #333; line-height: 1.2; padding: 0 0 40px 0; margin: 0;">
@@ -39,16 +50,16 @@
 
 <!-- FREE DELIVERY -->
   <nav style="position: sticky; top: 0; z-index: 5; background: rgba(251, 255, 0, 0.9); display: flex; justify-content: center; gap: 1rem; align-items: center; max-width: 100%; height: 30px; font-weight: bold; font-family: 'Inter', sans-serif;">
-    <a href="#him" style="font-size: 0.8rem; color: #000000; text-decoration: none; text-align: center">🚚 FREE 48 HOUR TRACKED DELIVERY 🚚 </a>
+    <a href="#him" style="font-size: 0.75rem; color: #000000; text-decoration: none; text-align: center">🚚 FREE 48 HOUR TRACKED DELIVERY 🚚 </a>
 </nav>
 
 <!-- FREE BOOK -->
   <nav style="position: sticky; top: 0; z-index: 5; background: rgba(19, 209, 2, 0.9); display: flex; justify-content: center; gap: 1rem; align-items: center; max-width: 100%; height: 30px; font-weight: bold; font-family: 'Inter', sans-serif;">
-    <a href="https://amzn.eu/d/9aZqmLU" style="font-size: 0.8rem; color: #000000; text-decoration: none; text-align: center">🎉 FREE COPY OF MY BOOK FOR FIRST 10 ORDERS! 🎉</a>
+    <a href="https://amzn.eu/d/9aZqmLU" style="font-size: 0.75rem; color: #000000; text-decoration: none; text-align: center">🎉 FREE COPY OF MY BOOK FOR FIRST 10 ORDERS! 🎉</a>
 </nav>
 
 <!-- Grey Nav Bar -->
-  <nav style="position: sticky; top: 0; z-index: 5; box-shadow: 0 10px 10px #ffffff; background: rgba(0, 0, 0, 1); display: flex; justify-content: center; gap: 0.5rem; align-items: center; max-width: 100%; height: 40px; font-weight: bold; font-family: 'Inter', sans-serif;">
+  <nav style="position: sticky; top: 0; z-index: 5; background: rgba(0, 0, 0, 1); display: flex; justify-content: center; gap: 0.5rem; align-items: center; max-width: 100%; height: 40px; font-weight: bold; font-family: 'Inter', sans-serif;">
     <a href="#him" style="font-size: 0.7rem; color: #ffffff; text-decoration: none; text-align: center";">For Him</a>
     <a href="#her" style="font-size: 0.7rem; color: #ffffff; text-decoration: none; text-align: center";">For Her</a>
     <a href="#unisex" style="font-size: 0.7rem; color: #ffffff; text-decoration: none; text-align: center";">Unisex</a>
@@ -78,23 +89,23 @@
   </nav>
     
 <!-- INTRO VIDEO SECTION -->
-<section id="intro" style="position: relative; overflow: hidden; height: 600px;">
+<section id="intro" style="position: relative; overflow: hidden; height: 850px; background-color: rgba(0, 0, 0, 0.5);">
   <video id="video-intro" autoplay muted playsinline style="
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 600px;
+    height: 850px;
     object-fit: cover;
-    opacity: 1;
+    opacity: 0.9;
     z-index: -1;
     filter: brightness(0.75);">
-    <source id="source-intro" src="videos/OceanTide(i).mp4" type="video/mp4">
+    <source id="source-intro" src="videos/intro.mp4" type="video/mp4">
   </video>
 
     <!-- BACKGROUND VIDEO-->
     <script>
-      const sourcesIntro = ["videos/OceanTide(i).mp4", "videos/OceanTide(i)(reverse).mp4"];
+      const sourcesIntro = ["videos/intro.mp4", "videos/intro.mp4"];
       let indexIntro = 0;
       const videoIntro = document.getElementById("video-intro");
       const sourceIntro = document.getElementById("source-intro");
@@ -114,47 +125,51 @@
   left: 50%; 
   transform: translate(-50%, -50%);
   font-weight: bold; 
-  background: #000000; 
+  background: rgba(0, 0, 0, 0.1); 
   color: #ffffff; 
   padding: 1rem 2rem; 
   border-radius: 100px; 
-  font-size: 1.3rem; 
+  font-size: 1.4rem; 
   font-family: 'Playfair Display', serif;
   text-align: center; 
   width: 80%; 
   max-width: 600px;
 ">
   <p>From a lifelong dream, a world of scents grew.</p>
-  <p>I gathered precious materials, rare things too.</p>
-  <p>Some feel vintage, others boldly modern.</p>
-  <p>Let your senses wonder, to find your pattern.</p>
+  <br><p>I gathered precious materials, rare things too.</p>
+  <br><p>Some feel vintage, others boldly modern.</p>
+  <br><p>Let your senses wonder, to find your pattern.</p>
 </div>
 
 </section>
 
+
+
+
+
   <!-- FOR HIM VIDEO-->
-  <section id="him" style="position: relative; overflow: hidden; padding: 3rem 2rem;">
-    <video id="video-him" autoplay muted playsinline style="
+   <section id="her" style="position: relative; overflow: hidden; padding: 3rem 2rem; background-color: rgba(255, 255, 255, 0.5);">
+    <video id="video-her" autoplay muted playsinline style="
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.9;
+      opacity: 0.5;
       z-index: -1;
       filter: brightness(0.75);">
-      <source id="source-him" src="videos/OceanTide(m).mp4" type="video/mp4">
+      <source id="source-her" src="videos/forhim.mp4" type="video/mp4">
     </video>
     <script>
-      const sourcesHim = ["videos/OceanTide(m).mp4", "videos/OceanTide(m)(reverse).mp4"];
+      const sourcesHim = ["videos/forhim.mp4", "videos/forhim.mp4"];
       let indexHim = 0;
-      const videoHim = document.getElementById("video-him");
-      const sourceHim = document.getElementById("source-him");
+      const videoHim = document.getElementById("video-her");
+      const sourceHim = document.getElementById("source-her");
 
       videoHim.addEventListener("ended", () => {
-        indexHim = (indexHim + 1) % sourcesHim.length;
-        sourceHim.src = sourcesHim[indexHim];
+        indexHim = (indexHer + 1) % sourcesHer.length;
+        sourceHim.src = sourcesHer[indexHer];
         videoHim.load();
         videoHim.play().catch(err => console.error("Playback failed:", err));
       });
@@ -162,7 +177,7 @@
 
 <!-- FOR HIM LOGO-->
 <div style="text-align: center;">
-  <h2 style="display: inline-block; font-family: Cambria, serif; font-size: 3rem; font-weight: bold; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem 2rem; box-shadow: 0 10px 50px #ffffff;">
+  <h2 style="display: inline-block; font-family: Cambria, serif; font-size: 3rem; font-weight: bold; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem 2rem; box-shadow: 0 10px 50px #000000;">
     FOR HIM
   </h2>
 </div>
@@ -221,8 +236,12 @@
 
   </section>
 
+
+
+
+
   <!-- FOR HER VIDEO-->
-  <section id="her" style="position: relative; overflow: hidden; padding: 3rem 2rem;">
+  <section id="her" style="position: relative; overflow: hidden; padding: 3rem 2rem; background-color: rgba(255, 255, 255, 0.5);">
     <video id="video-her" autoplay muted playsinline style="
       position: absolute;
       top: 0;
@@ -230,13 +249,13 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.9;
+      opacity: 0.5;
       z-index: -1;
       filter: brightness(0.75);">
-      <source id="source-her" src="videos/OceanTide(f).mp4" type="video/mp4">
+      <source id="source-her" src="videos/forher.mp4" type="video/mp4">
     </video>
     <script>
-      const sourcesHer = ["videos/OceanTide(f).mp4", "videos/OceanTide(f)(reverse).mp4"];
+      const sourcesHer = ["videos/forher.mp4", "videos/forher.mp4"];
       let indexHer = 0;
       const videoHer = document.getElementById("video-her");
       const sourceHer = document.getElementById("source-her");
@@ -249,9 +268,9 @@
       });
     </script>
 
-  <!-- FOR HER PRODUCTS-->
+  <!-- FOR HER LOGO-->
 <div style="text-align: center;">
-<h2 style="display: inline-block; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 3rem; font-weight: bold; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem 2rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">FOR HER
+<h2 style="display: inline-block; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 3rem; font-weight: bold; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem 2rem; box-shadow: 0 10px 50px #000000; transition: transform 0.3s;">FOR HER
 </div>
 <div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; max-width: 1200px; margin: auto; padding: 1rem;">
 
@@ -320,8 +339,12 @@
 
   </section>
 
+
+
+
+
   <!-- UNISEX VIDEO-->
-  <section id="unisex" style="position: relative; overflow: hidden; padding: 3rem 2rem;">
+  <section id="unisex" style="position: relative; overflow: hidden; padding: 3rem 2rem; background-color: rgba(255, 255, 255, 0.5);">
     <video id="video-unisex" autoplay muted playsinline style="
       position: absolute;
       top: 0;
@@ -332,10 +355,10 @@
       opacity: 0.5;
       z-index: -1;
       filter: brightness(0.75);">
-      <source id="source-unisex" src="videos/OceanTide(u).mp4" type="video/mp4">
+      <source id="source-unisex" src="videos/unisex.mp4" type="video/mp4">
     </video>
     <script>
-      const sourcesUnisex = ["videos/OceanTide(u).mp4", "videos/OceanTide(u)(reverse).mp4"];
+      const sourcesUnisex = ["videos/unisex.mp4", "videos/unisex.mp4"];
       let indexUnisex = 0;
       const videoUnisex = document.getElementById("video-unisex");
       const sourceUnisex = document.getElementById("source-unisex");
@@ -347,10 +370,10 @@
         videoUnisex.play().catch(err => console.error("Playback failed:", err));
       });
     </script>
-
-  <!-- UNISEX PRODUCTS-->
+ 
+ <!-- UNISEX LOGO-->
 <div style="text-align: center;">
-<h2 style="display: inline-block; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 3rem; font-weight: bold; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem 2rem; box-shadow: 0 10px 50px #ffffff; transition: transform 0.3s;">UNISEX
+<h2 style="display: inline-block; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 3rem; font-weight: bold; cursor: pointer; background: #ffffff; border-radius: 80px; color: #000000; padding: 1rem 2rem; box-shadow: 0 10px 50px #000000; transition: transform 0.3s;">UNISEX
 </div>
 <div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; max-width: 1200px; margin: auto; padding: 1rem;">
 

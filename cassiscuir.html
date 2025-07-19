@@ -39,12 +39,12 @@
 
 <!-- FREE DELIVERY -->
   <nav style="position: sticky; top: 0; z-index: 5; background: rgba(251, 255, 0, 0.9); display: flex; justify-content: center; gap: 1rem; align-items: center; max-width: 100%; height: 30px; font-weight: bold; font-family: 'Inter', sans-serif;">
-    <a href="#him" style="font-size: 0.8rem; color: #000000; text-decoration: none; text-align: center">🚚 FREE 48 HOUR TRACKED DELIVERY 🚚 </a>
+    <a href="#him" style="font-size: 0.75rem; color: #000000; text-decoration: none; text-align: center">🚚 FREE 48 HOUR TRACKED DELIVERY 🚚 </a>
 </nav>
 
 <!-- FREE BOOK -->
   <nav style="position: sticky; top: 0; z-index: 5; background: rgba(19, 209, 2, 0.9); display: flex; justify-content: center; gap: 1rem; align-items: center; max-width: 100%; height: 30px; font-weight: bold; font-family: 'Inter', sans-serif;">
-    <a href="https://amzn.eu/d/9aZqmLU" style="font-size: 0.8rem; color: #000000; text-decoration: none; text-align: center">🎉 FREE COPY OF MY BOOK FOR FIRST 10 ORDERS! 🎉</a>
+    <a href="https://amzn.eu/d/9aZqmLU" style="font-size: 0.75rem; color: #000000; text-decoration: none; text-align: center">🎉 FREE COPY OF MY BOOK FOR FIRST 10 ORDERS! 🎉</a>
 </nav>
 
   <!-- Grey Nav Bar -->
@@ -75,7 +75,7 @@
   </nav>
 
   <!-- VIDEO-->
-  <section id="him" style="position: relative; overflow: hidden; padding: 3rem 2rem;">
+  <section id="him" style="position: relative; overflow: hidden; padding: 3rem 2rem; background-color: rgba(255, 255, 255, 0.5);">
     <video id="video-him" autoplay muted playsinline style="
       position: absolute;
       top: 0;
@@ -83,13 +83,13 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 1;
+      opacity: 0.5;
       z-index: -1;
       filter: brightness(0.75);">
-      <source id="source-him" src="videos/OceanTide(i).mp4" type="video/mp4">
+      <source id="source-him" src="videos/forhim.mp4" type="video/mp4">
     </video>
     <script>
-      const sourcesHim = ["videos/OceanTide(i).mp4", "videos/OceanTide(i)(reverse).mp4"];
+      const sourcesHim = ["videos/forhim.mp4", "videos/forhim.mp4"];
       let indexHim = 0;
       const videoHim = document.getElementById("video-him");
       const sourceHim = document.getElementById("source-him");
@@ -105,7 +105,7 @@
 
   <!-- CASSIS CUIR-->
     <div class="products" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 5rem; max-width: 100%; margin: auto;">
-      <div style="color: #ffffff; max-width: 90%;">
+      <div style="color: #000000; max-width: 90%;">
         <paypal-add-to-cart-button data-id="86RR3C3EVRCT8"></paypal-add-to-cart-button>
         <script>cartPaypal.AddToCart({ id: "86RR3C3EVRCT8" })</script>
       </div>
